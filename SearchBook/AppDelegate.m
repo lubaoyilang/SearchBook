@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "HomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +19,40 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    ViewController *viewController = [[ViewController alloc] init];
+    HomeViewController *viewController = [[HomeViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil] ];
+    
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
+    //
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+    
+    
+    
+    
+    
+    [[UINavigationBar appearance] setBarTintColor:RGBCOLOR(58, 184, 197)];
+    [UINavigationBar appearance].tintColor =[UIColor whiteColor];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
